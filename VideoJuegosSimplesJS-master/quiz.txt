@@ -1,0 +1,91 @@
+Sushi:
+a) Japón
+b) Corea del Sur
+c) China
+d) Vietnam
+
+Pizza:
+a) México
+b) Grecia
+c) Estados Unidos
+d) Australia
+
+Kimchi:
+a) Japón
+b) Vietnam
+c) India
+d) Tailandia
+
+Paella:
+a) Portugal
+b) Italia
+c) Marruecos
+d) Argentina
+
+Falafel:
+a) Egipto
+b) Israel
+c) Turquía
+d) Líbano
+
+Curry:
+a) Pakistán
+b) China
+c) Indonesia
+d) Tailandia
+
+Bratwurst:
+a) Suiza
+b) Austria
+c) Polonia
+d) Rusia
+
+Peking Duck:
+a) Corea del Sur
+b) Japón
+c) Singapur
+d) Vietnam
+
+Goulash:
+a) Eslovaquia
+b) Croacia
+c) Rumania
+d) Polonia
+
+Pad Thai:
+a) Indonesia
+b) Filipinas
+c) Vietnam
+d) Singapur
+
+Tacos:
+a) Brasil
+b) España
+c) Argentina
+d) Chile
+
+Moussaka:
+a) Turquía
+b) Israel
+c) Egipto
+d) Líbano
+
+Escargots:
+a) España
+b) Portugal
+c) Italia
+d) Grecia
+
+Borscht:
+a) Finlandia
+b) Noruega
+c) Suecia
+d) Dinamarca
+
+Churros:
+a) Francia
+b) Italia
+c) Portugal
+d) Argentina
+
+Abierto por el mejor
