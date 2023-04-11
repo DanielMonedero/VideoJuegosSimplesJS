@@ -1,186 +1,200 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Quiz</title>
     <style>
-      /* Estilos para el quiz */
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-      .container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-      .question {
-        font-weight: bold;
-        margin-bottom: 10px;
-      }
-      .answer {
-        margin-bottom: 10px;
-      }
-      .score {
-        font-weight: bold;
-        margin-bottom: 10px;
-      }
-      .timer {
-        font-weight: bold;
-        margin-bottom: 10px;
-      }
-      /* Estilos para el botón */
-      .button {
-        display: inline-block;
-        background-color: #007bff;
-        color: #fff;
-        padding: 10px 20px;
-        border-radius: 5px;
-        text-decoration: none;
-      }
-      .button:hover {
-        background-color: #0069d9;
-      }
-      /* Estilos para la página responsive */
-      @media only screen and (max-width: 600px) {
-        .container {
-          padding: 10px;
+        /* Estilos para el quiz */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
-      }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .question {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .answer {
+            margin-bottom: 10px;
+        }
+
+        .score {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .timer {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Estilos para el botón */
+        .button {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #0069d9;
+        }
+
+        /* Estilos para la página responsive */
+        @media only screen and (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="container">
-      <div class="question"></div>
-      <div class="answer"></div>
-      <div class="score"></div>
-      <div class="timer"></div>
-      <button class="button" onclick="nextQuestion()">Siguiente</button>
+        <div class="question"></div>
+        <div class="answer"></div>
+        <div class="score"></div>
+        <div class="timer"></div>
+        <button class="button" onclick="">Siguiente</button>
     </div>
     <script>
-      // Array con las preguntas y respuestas
-      const questions = [
-        {
-          question: '¿Cuál es la capital de Francia?',
-          answers: ['Madrid', 'Londres', 'París', 'Roma'],
-          correctAnswer: 2
-        },
-        {
-          question: '¿Cuál es el animal más grande del mundo?',
-          answers: ['Elefante', 'Ballena', 'Girafa', 'Hipopótamo'],
-          correctAnswer: 1
-        },
-        {
-          question: '¿Cuál es el continente más grande?',
-          answers: ['Asia', 'África', 'América', 'Europa'],
-          correctAnswer: 0
-        },
-        {
-          question: '¿Cuál es el océano más grande?',
-          answers: ['Atlántico', 'Pacífico', 'Índico', 'Antártico'],
-          correctAnswer: 1
-        },
-        {
-          question: '¿Cuál es el símbolo químico del hierro?',
-          answers: ['He', 'Ir', 'Fe', 'Cu'],
-          correctAnswer: 2
+        // Array con las preguntas y respuestas
+        const questions = [
+            {
+                question: '¿Cuál es la capital de Francia?',
+                answers: ['Madrid', 'Londres', 'París', 'Roma'],
+                correctAnswer: 2
+            },
+            {
+                question: '¿Cuál es el animal más grande del mundo?',
+                answers: ['Elefante', 'Ballena', 'Girafa', 'Hipopótamo'],
+                correctAnswer: 1
+            },
+            {
+                question: '¿Cuál es el continente más grande?',
+                answers: ['Asia', 'África', 'América', 'Europa'],
+                correctAnswer: 0
+            },
+            {
+                question: '¿Cuál es el océano más grande?',
+                answers: ['Atlántico', 'Pacífico', 'Índico', 'Antártico'],
+                correctAnswer: 1
+            },
+            {
+                question: '¿Cuál es el símbolo químico del hierro?',
+                answers: ['He', 'Ir', 'Fe', 'Cu'],
+                correctAnswer: 2
+            }
+        ];
+
+        // Variables del quiz
+        let currentQuestion = 0;
+        var score = 0;
+        let timeLeft = 60;
+        let timerInterval;
+
+        // Función para mostrar la siguiente pregunta
+        function nextQuestion() {
+            // Comprobar si hay más preguntas
+            if (currentQuestion >= questions.length) {
+                endQuiz();
+                return;
+            }
+            // Resetear la respuesta
+            document.querySelector('.answer').innerHTML = '';
+
+            // Mostrar la pregunta actual
+            document.querySelector('.question').innerHTML = questions[currentQuestion].question;
+
+            // Mostrar las opciones de respuesta
+            const answers = questions[currentQuestion].answers;
+            let answerHtml = '';
+            for (let i = 0; i < answers.length; i++) {
+                answerHtml += `<div><input type="radio" name="answer" value="${i}"> ${answers[i]}</div>`;
+            }
+            document.querySelector('.answer').innerHTML = answerHtml;
+
+            // Añadir el botón de siguiente o finalizar
+            currentQuestion++;
+            if (currentQuestion >= questions.length) {
+                document.querySelector('.button').innerHTML = 'Finalizar';
+            }
         }
-      ];
 
-      // Variables del quiz
-      let currentQuestion = 0;
-      let score = 0;
-      let timeLeft = 60;
-      let timerInterval;
+        // Función para comprobar la respuesta
+        function checkAnswer() {
+            console.log(score)
+            // Comprobar si hay una respuesta seleccionada
+            const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+            if (selectedAnswer == null) {
+                console.log(selectedAnswer)
+                return;
+            }
 
-      // Función para mostrar la siguiente pregunta
-      function nextQuestion() {
-        // Comprobar si hay más preguntas
-        if (currentQuestion >= questions.length) {
-          endQuiz();
-          return;
+            // Comprobar si la respuesta es correcta
+            const selectedAnswerValue = Number(selectedAnswer.value);
+            const correctAnswer = questions[currentQuestion - 1].correctAnswer;
+            console.log(selectedAnswerValue)
+            console.log(score)
+            console.log(correctAnswer)
+            if (selectedAnswerValue == correctAnswer) {
+                score++;
+            }
+
+            // Deshabilitar las respuestas para evitar seleccionar varias respuestas
+            const answerRadios = document.querySelectorAll('input[type="radio"]');
+            for (let i = 0; i < answerRadios.length; i++) {
+                answerRadios[i].disabled = true;
+            }
+
+            // Mostrar la puntuación actual
+            document.querySelector('.score').innerHTML = `Puntuación: ${score}`;
+
+            // Pasar a la siguiente pregunta
+            nextQuestion();
         }
-        // Resetear la respuesta
-        document.querySelector('.answer').innerHTML = '';
 
-        // Mostrar la pregunta actual
-        document.querySelector('.question').innerHTML = questions[currentQuestion].question;
 
-        // Mostrar las opciones de respuesta
-        const answers = questions[currentQuestion].answers;
-        let answerHtml = '';
-        for (let i = 0; i < answers.length; i++) {
-          answerHtml += `<div><input type="radio" name="answer" value="${i}"> ${answers[i]}</div>`;
+
+        // Función para finalizar el quiz
+        function endQuiz() {
+            // Parar el temporizador
+            clearInterval(timerInterval);
+
+            // Mostrar la puntuación final
+            document.querySelector('.question').innerHTML = `Quiz completado. Tu puntuación es ${score}/${questions.length}.`;
+
+            // Ocultar las opciones de respuesta y el botón de siguiente
+            document.querySelector('.answer').innerHTML = '';
+            document.querySelector('.button').style.display = 'none';
         }
-        document.querySelector('.answer').innerHTML = answerHtml;
 
-        // Añadir el botón de siguiente o finalizar
-        currentQuestion++;
-        if (currentQuestion >= questions.length) {
-          document.querySelector('.button').innerHTML = 'Finalizar';
+        // Función para actualizar el temporizador
+        function updateTimer() {
+            timeLeft--;
+            document.querySelector('.timer').innerHTML = `Tiempo restante: ${timeLeft}s`;
+            if (timeLeft <= 0) {
+                endQuiz();
+            }
         }
-      }
 
-// Función para comprobar la respuesta
-function checkAnswer() {
-  // Comprobar si hay una respuesta seleccionada
-  const selectedAnswer = document.querySelector('input[name="answer"]:checked');
-  if (!selectedAnswer) {
-    return;
-  }
-
-  // Comprobar si la respuesta es correcta
-  const selectedAnswerValue = Number(selectedAnswer.value);
-  const correctAnswer = questions[currentQuestion - 1].correctAnswer;
-  if (selectedAnswerValue === correctAnswer) {
-    score++;
-  }
-
-  // Deshabilitar las respuestas para evitar seleccionar varias respuestas
-  const answerRadios = document.querySelectorAll('input[type="radio"]');
-  for (let i = 0; i < answerRadios.length; i++) {
-    answerRadios[i].disabled = true;
-  }
-
-  // Mostrar la puntuación actual
-  document.querySelector('.score').innerHTML = `Puntuación: ${score}`;
-
-  // Pasar a la siguiente pregunta
-  nextQuestion();
-}
-
-
-
-      // Función para finalizar el quiz
-      function endQuiz() {
-        // Parar el temporizador
-        clearInterval(timerInterval);
-
-        // Mostrar la puntuación final
-        document.querySelector('.question').innerHTML = `Quiz completado. Tu puntuación es ${score}/${questions.length}.`;
-
-        // Ocultar las opciones de respuesta y el botón de siguiente
-        document.querySelector('.answer').innerHTML = '';
-        document.querySelector('.button').style.display = 'none';
-      }
-
-      // Función para actualizar el temporizador
-      function updateTimer() {
-        timeLeft--;
-        document.querySelector('.timer').innerHTML = `Tiempo restante: ${timeLeft}s`;
-        if (timeLeft <= 0) {
-          endQuiz();
-        }
-      }
-
-      // Inicializar el quiz
-      nextQuestion();
-      document.querySelector('.button').addEventListener('click', checkAnswer);
-      timerInterval = setInterval(updateTimer, 1000);
+        // Inicializar el quiz
+        nextQuestion();
+        document.querySelector('.button').addEventListener('click', checkAnswer);
+        timerInterval = setInterval(updateTimer, 1000);
     </script>
-  </body>
-</html>
+</body>
 
-    
+</html>
