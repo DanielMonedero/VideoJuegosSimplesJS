@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Portal de Juegos</title>
+  <link rel="stylesheet" href="pagPrincipalCSS.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Bienvenido al Portal de Juegos</h1>
+  </header>
+  <main>
+    <section class="intro">
+      <h2>Elige un juego para jugar:</h2>
+      <div class="buttons">
+        <button id="juego1">Quiz</button>
+        <button id="juego2">Simon Dice</button>
+        <button id="juego3">Ahorcado</button>
+        <button id="random">Juego Aleatorio</button>
+      </div>
+    </section>
+    <section class="documentation">
+      <h2>Documentación</h2>
+      <p>Este proyecto ha sido desarrollado por Daniel Monedero Cabrera y Guillermo.</p>
+      <ul>
+        <li>Organización: Guillermo ha realizado el quiz completo y el ahorcado, mientras que Daniel ha realizado la página principal y el Simon Dice.</li>
+        <li>La web tiene una página principal en la que puedes elegir jugar a cada juego o seleccionar uno aleatorio.</li>
+        <li>Quiz: El quiz consta de 5 preguntas, un temporizador de un minuto y un marcador de preguntas acertadas.</li>
+        <li>Simón dice: Consiste en repetir la secuencia de botones reproducida por el programa de forma aleatoria. En caso de fallo se dará la puntuación final. El número máximo de botones pulsables es de 100.</li>
+        <li>Ahorcado: Consiste en encontrar la palabra que aparece oculta. Para ello seleccionas la letra que quieres probar y la llevas al tablero de juego arrastrándola. También se dispone de un contador de fallos. Se gana si se resuelve la palabra y se pierde si se cometen los fallos máximos.</li>
+      </ul>
+    </section>
+  </main>
+  <script src="pagPrincipalJS.js"></script>
+</body>
+
+</html>

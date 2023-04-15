@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="simonDiceCSS.css">
+    <title>Simon Dice</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <button class="boton" id="izAr" data-color="izAr"></button>
+        <button class="boton" id="cenAr" data-color="cenAr"></button>
+        <button class="boton" id="derAr" data-color="derAr"></button>
+        <button class="boton" id="izCen" data-color="izCen"></button>
+        <button class="boton" id="cenCen" data-color="cenCen"></button>
+        <button class="boton" id="derCen" data-color="derCen"></button>
+        <button class="boton" id="izAb" data-color="izAb"></button>
+        <button class="boton" id="cenAb" data-color="cenAb"></button>
+        <button class="boton" id="derAb" data-color="derAb"></button>
+    </div>
+    <button id="btnEmpezar" class="principal" onclick="iniciarJuego()">Empezar</button>
+    <button class="principal" id="btnVolver" onclick="volverPaginaPrincipal()">Volver</button>
+    <script>
+        // Este código sirve para volver a la página principal, ya que al haber usado un botón no se puede hacer con href
+        document.getElementById("btnVolver").onclick = function () {
+            history.back();
+        };
+    </script>
+    <script src="simonDiceJS.js"></script>
+</body>
+
+</html>

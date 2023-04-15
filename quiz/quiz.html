@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="quizCSS.css" />
+</head>
+
+<body>
+    <header>
+        <h1>QUIZ DE CULTURA GENERAL</h1>
+    </header>
+    <div class="container">
+        <div class="question"></div>
+        <div class="answer"></div>
+        <div class="score"></div>
+        <div class="timer"></div>
+        <button class="button" onclick="">Siguiente</button>
+    </div>
+    <button class="button" id="volver" onclick="volverPaginaPrincipal()">Volver</button>
+    <script>
+        // Este código sirve para volver a la página principal, ya que al haber usado un botón no se puede hacer con href
+        document.getElementById("volver").onclick = function () {
+            history.back();
+        };
+    </script>
+    <script src="quizJS.js"></script>
+</body>
+
+</html>
