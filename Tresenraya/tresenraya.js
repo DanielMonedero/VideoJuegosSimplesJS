@@ -59,7 +59,8 @@ function checkWinner() {
     }
   }
 /* Si todas las celdas tienen contenido y no hay ganador, se muestra un mensaje de alerta de empate y se reinicia el juego */
-  if ([...cells].every((cell) => cell.textContent !== "")) {
+
+  if ([...cells].every((cell) => cell.textContent !== "") && cells[a].textContent && cells[a].textContent === cells[b].textContent && cells[b].textContent === cells[c].textContent) {
     // He añadido un timeOut para que de tiempo a ver el tablero completo y no se borre nada mas soltar la ultima pieza
     setTimeout(() => alert("¡¡EMPATE!!"), 500);
     setTimeout(() => resetGame(), 500);
