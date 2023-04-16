@@ -13,9 +13,11 @@ body {
 }
 
 h1 {
+  font-size: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Sedgwick Ave Display', cursive;
 }
 
 .row {
@@ -64,8 +66,8 @@ h1 {
 
 #volvermenu {
   position: absolute;
-  bottom: 20%;
-  left: 20%;
+  top: 66%;
+  left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
   border-radius: 5px;

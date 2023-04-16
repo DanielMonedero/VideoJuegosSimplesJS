@@ -13,7 +13,12 @@ body {
   align-items: center;
   min-height: 100vh;
 }
-
+.titulo{
+  position: absolute;
+  top: 1%;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 23px;
+}
 .contenedor {
   padding-top: 70px;
   display: grid;
@@ -66,7 +71,7 @@ body {
   text-decoration: none;
   font-size: 18px;
   margin: 20px;
-  top: 60px;
+  top: 100px;
   cursor: pointer;
 }
 

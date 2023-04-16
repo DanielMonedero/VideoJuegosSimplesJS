@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <title>Tic Tac Toe</title>
   <link rel="stylesheet" href="tresenrayaCSS.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
 </head>
+
 <body>
+  <audio src="tictactoe.mp3" autoplay="" loop=""></audio>
   <h1>Tres en raya</h1>
   <div class="board">
-    
+
     <div class="row">
       <div class="cell" id="0" draggable="true"></div>
       <div class="cell" id="1" draggable="true"></div>
@@ -27,11 +33,12 @@
     <div class="cellx" id="arrastrable" draggable="true"></div>
     <button id="volvermenu" class="principal" onclick="volverPaginaPrincipal()">Volver</button>
     <script>
-        // Este código sirve para volver a la página principal, ya que al haber usado un botón no se puede hacer con href
-        document.getElementById("volvermenu").onclick = function () {
-            history.back();
-        };
+      // Este código sirve para volver a la página principal, ya que al haber usado un botón no se puede hacer con href
+      document.getElementById("volvermenu").onclick = function () {
+        history.back();
+      };
     </script>
-  <script src="tresenraya.js"></script>
+    <script src="tresenraya.js"></script>
 </body>
+
 </html>

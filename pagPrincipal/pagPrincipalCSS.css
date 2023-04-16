@@ -5,70 +5,78 @@ body {
   background-color: #f7f7f7;
   font-family: Arial, sans-serif;
   font-size: 16px;
-  }
-  
-  /* Estilo para el header */
-  header {
+}
+
+/* Estilo para el header */
+header {
   background-color: #4CAF50;
   color: #fff;
   padding: 20px;
   text-align: center;
-  }
-  
-  /* Estilo para el h1 dentro del header */
-  header h1 {
+}
+
+/* Estilo para el h1 dentro del header */
+header h1 {
   margin: 0;
   font-size: 36px;
   font-weight: bold;
-  }
-  
-  /* Estilo para el main */
-  main {
+  font-family: 'Aboreto', cursive;
+  font-family: 'Anton', sans-serif;
+  font-family: 'Bebas Neue', cursive;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+/* Estilo para el main */
+main {
   margin: 20px auto;
   max-width: 800px;
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Estilo para la sección de introducción */
-  .intro {
+}
+
+/* Estilo para la sección de introducción */
+.intro {
   margin-bottom: 40px;
-  }
-  
-  /* Estilo para el h2 dentro de la sección de introducción */
-  .intro h2 {
+}
+
+/* Estilo para el h2 dentro de la sección de introducción */
+h2 {
   margin-top: 0;
   font-size: 24px;
   font-weight: bold;
-  }
-  
-  /* Estilo para los párrafos dentro de la sección de introducción */
-  .intro p {
+    font-family: 'Righteous', cursive;
+
+}
+
+/* Estilo para los párrafos dentro de la sección de introducción */
+.intro p {
   margin-top: 0;
   line-height: 1.5;
-  }
-  
-  /* Estilo para la sección de documentación */
-  .documentation {
+}
+
+/* Estilo para la sección de documentación */
+.documentation {
   margin-bottom: 40px;
-  }
-  
-  /* Estilo para el h2 dentro de la sección de documentación */
-  .documentation h2 {
+}
+
+/* Estilo para el h2 dentro de la sección de documentación */
+.documentation h2 {
   margin-top: 0;
   font-size: 24px;
   font-weight: bold;
-  }
-  
-  /* Estilo para los párrafos dentro de la sección de documentación */
-  .documentation p {
+}
+
+/* Estilo para los párrafos dentro de la sección de documentación */
+.documentation p {
   margin-top: 0;
   line-height: 1.5;
-  }
-  
-  /* Estilo para los botones */
-  button {
+}
+
+/* Estilo para los botones */
+button {
   display: inline-block;
   padding: 10px 20px;
   font-size: 18px;
@@ -81,14 +89,14 @@ body {
   border-radius: 5px;
   cursor: pointer;
   margin-right: 10px;
-  }
-  
-  /* Estilo para los botones en hover */
-  button:hover {
+}
+
+/* Estilo para los botones en hover */
+button:hover {
   background-color: #3e8e41;
-  }
-  
-  /* Estilo para el botón de juego aleatorio */
-  #random {
+}
+
+/* Estilo para el botón de juego aleatorio */
+#random {
   margin-left: 20px;
-  }
+}

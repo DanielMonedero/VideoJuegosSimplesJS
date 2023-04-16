@@ -5,13 +5,17 @@
     <meta charset="UTF-8" />
     <title>JavaScript Hangman Game</title>
     <link rel="stylesheet" href="AhorcadoCSS.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <audio src="musicaahorcado.mp3" autoplay="" loop=""></audio>
+    <h1>Juego Del Ahorcado</h1>
     <div id="dibujo">
         <div id="status"><img src="status_0.gif" alt="Current Status" id="current-status" /></div>
-        <div id="inputs" draggable="true" ></div>
+        <div id="inputs" draggable="true"></div>
         <div id="buttons" draggable="true"></div>
         <p id="results"></p>
     </div>
@@ -24,7 +28,7 @@
         };
     </script>
     <script src="Ahorcado.js"></script>
-   
+
 </body>
 
 </html>

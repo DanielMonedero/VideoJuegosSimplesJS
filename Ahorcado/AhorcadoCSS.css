@@ -1,23 +1,33 @@
 /* Ubicamos la posicion de todo el panel */
-body{
-    background-color: aqua;
+body {
+    background-color: rgb(207, 162, 0);
 }
+
+h1 {
+    text-align: center;
+    font-family: 'Arvo', serif;
+    font-size: 40px;
+}
+
 #dibujo {
     width: 400px;
     margin: 50px auto;
     text-align: center;
 }
+
 /* Ubicamos del dibujo del ahorcado */
 #status {
     width: 200px;
     float: left;
 }
+
 /* ponemos los valores del div de los inputs (las letras que hay que adivinar) */
 #inputs {
     width: 200px;
     float: right;
     margin-top: 50px;
 }
+
 /* ponemos los valores a cada input (las letras que hay que adivinar) */
 #inputs input {
     width: 25px;
@@ -28,12 +38,14 @@ body{
     border-bottom: 3px solid black;
     font-size: 25px;
 }
+
 /* ponemos los valores del div de los botones*/
 #buttons {
     clear: both;
     width: 400px;
     margin: 0px auto;
 }
+
 /* ponemos los valores del div de los botones (las letras del abecedario)*/
 #buttons button {
     padding: 11px;
