@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Portal de Juegos</title>
+  <link rel="stylesheet" href="pagPrincipalCSS.css" />
+</head>
+
+<body>
+  <audio src="ladyfinal.mp3" autoplay="" loop="" ></audio>
+  <header>
+    <h1>Bienvenido al Portal de Juegos</h1>
+  </header>
+  <main>
+    <section class="intro">
+      <h2>Elige un juego para jugar:</h2>
+      <div class="buttons">
+        <button id="juego1">Quiz</button>
+        <button id="juego2">Simon Dice</button>
+        <button id="juego3">Ahorcado</button>
+        <button id="juego4">Tres en raya</button>
+        <button id="random">Juego Aleatorio</button>
+      </div>
+    </section>
+    <section class="documentation">
+      <h2>Documentación</h2>
+      <p>Este proyecto ha sido desarrollado por Daniel Monedero Cabrera y Guillermo Callizaya Fernández.</p>
+      <ul>
+        <li>Organización: Guillermo ha realizado una pagina de inicio para entrar a la pagina principal con una pequeña animacion, el quiz completo,el ahorcado y el tres en raya, mientras que Daniel ha realizado la página principal y el Simon Dice y ha solucionado unos pequeños problemas del quiz, tres en raya y ahorcado. Desde el primer día hemos seguido un control de versiones desde github. También hemos subido la web completa al siguiente enlace de awardspace:  .</li>
+        <li>La web tiene una página principal en la que puedes elegir jugar a cada juego o seleccionar uno aleatorio. Dentro de cada juego hay un botón para poder volver a la página principal.</li>
+        <li>Quiz: El quiz consta de varias preguntas, un temporizador de un minuto y un marcador de preguntas acertadas. El diseño responsitive es mobile first, aunque como la tarea se centraba en javascript todos los estilos son bastante básicos.</li>
+        <li>Simón dice: Consiste en repetir la secuencia de botones reproducida por el programa de forma aleatoria. En caso de fallo se dará la puntuación final. El número máximo de botones pulsables es de 100.</li>
+        <li>Ahorcado: Consiste en encontrar la palabra que aparece oculta. Para ello seleccionas la letra y comprueba si esta, si esta, la pone añade si no esta, se añade el fallo como dibujo. También se dispone de un contador de fallos. Se gana si se resuelve la palabra y se pierde si se cometen los fallos máximos.</li>
+        <li>Tres en raya: El juego consiste en un tablero de 3x3 donde vas arrastrando la casilla donde quieres poner la "X" o el "O" cuando uno de los dos gana aparece una ventana diciendo que jugador a ganado.</li>
+        <li><strong>Algunos problemas que hemos encontrado son:</strong>
+          <li>- El programa finaliza antes de terminar el juego: Todos los juegos excepto el quiz tienen un timeOut al final para que pueda verse la ultima ejecución del juego antes de mostrar el resultado y reiniciar.</li>
+          <li>- En Simon Dice tenía pensado poner un sonido diferente para cada boton, pero al ser una secuencia de colores que duran un timepo determinado todos los sonidos debian tener la misma duración exacta, por lo que al final he puesto un solo sonido para todos los botones correctos.</li>
+          <li>- En Simon Dice hay veces que los botones se iluminan mucho menos tiempo del que deberían. No pasa de forma continua ni en todas las partidas, desconocemos de donde viene el bug.</li>
+          <li>- En el ahorcado nos ha costado que el programa finalizase correctamente, se podía seguir jugando despues de haber ganado o perdido y no se reiniciaba.</li>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <script src="pagPrincipalJS.js"></script>
+</body>
+
+</html>
