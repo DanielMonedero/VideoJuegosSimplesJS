@@ -1,0 +1,61 @@
+body {
+  background-color: aqua;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px auto;
+  width: 306px;
+  height: 305px;
+  border: 5px solid black;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  background-color: blueviolet;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.cell:hover {
+  background-color: lightgray;
+}
+
+.cell:empty:before {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.cellx {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin-top: 30px;
+
+  border: 20px solid black;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  border: 1px solid black;
+}

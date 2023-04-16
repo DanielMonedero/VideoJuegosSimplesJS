@@ -1,6 +1,7 @@
 const juego1Button = document.getElementById("juego1");
 const juego2Button = document.getElementById("juego2");
 const juego3Button = document.getElementById("juego3");
+const juego4Button = document.getElementById("juego4");
 const randomButton = document.getElementById("random");
 
 juego1Button.addEventListener("click", () => {
@@ -12,7 +13,11 @@ juego2Button.addEventListener("click", () => {
 });
 
 juego3Button.addEventListener("click", () => {
-  window.location.href = "../ahorcado/ahorcado.html";
+  window.location.href = "../Ahorcado/Ahorcado.html";
+});
+
+juego4Button.addEventListener("click", () => {
+  window.location.href = "../Tresenraya/tresenraya.html";
 });
 
 randomButton.addEventListener("click", () => {
