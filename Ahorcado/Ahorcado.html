@@ -9,13 +9,13 @@
 
 <body>
     <audio src="musicaahorcado.mp3" autoplay="" loop=""></audio>
-    <div id="wrapper">
+    <div id="dibujo">
         <div id="status"><img src="status_0.gif" alt="Current Status" id="current-status" /></div>
         <div id="inputs" draggable="true" ></div>
         <div id="buttons" draggable="true"></div>
         <p id="results"></p>
     </div>
-    <button id="btnEmpezar" class="principal" onclick="iniciarJuego()">Empezar</button>
+    <button id="restart-btn" class="principal" onclick="restartGame()">Empezar</button>
     <button id="volvermenu" class="principal" onclick="volverPaginaPrincipal()">Volver</button>
     <script>
         // Este código sirve para volver a la página principal, ya que al haber usado un botón no se puede hacer con href
@@ -24,43 +24,7 @@
         };
     </script>
     <script src="Ahorcado.js"></script>
-    <script>
-        const inputs = document.querySelectorAll('input');
-        const buttons = document.querySelectorAll('button');
-    inputs.forEach(input => {
-        input.addEventListener('dragstart', () => {
-            input.classList.add('dragging');
-        });
-
-        input.addEventListener('dragend', () => {
-            input.classList.remove('dragging');
-        });
-    });
-
-    buttons.forEach(button => {
-        button.addEventListener('dragstart', () => {
-            button.classList.add('dragging');
-        });
-
-        button.addEventListener('dragend', () => {
-            button.classList.remove('dragging');
-        });
-    });
-
-    const targets = document.querySelectorAll('#inputs, #buttons');
-
-    targets.forEach(target => {
-        target.addEventListener('dragover', e => {
-            e.preventDefault();
-        });
-
-        target.addEventListener('drop', e => {
-            const draggable = document.querySelector('.dragging');
-            target.appendChild(draggable);
-            e.preventDefault();
-        });
-    });
-</script>
+   
 </body>
 
 </html>

@@ -19,7 +19,7 @@ h1 {
 }
 
 .row {
-  background-color: blueviolet;
+  background-color: #8a2be2;
 }
 
 .cell {
@@ -50,12 +50,31 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
   font-size: 20px;
   margin-top: 30px;
-
+  background-color: purple;
   border: 20px solid black;
   width: 100px;
   height: 100px;
   cursor: pointer;
   border: 1px solid black;
+}
+
+
+#volvermenu {
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 5px;
+  background-color: #8a2be2;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#volvermenu:hover {
+  background-color: #a443ff;
 }

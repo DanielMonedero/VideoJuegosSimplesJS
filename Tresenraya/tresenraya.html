@@ -25,9 +25,13 @@
       <div class="cell" id="8" draggable="true"></div>
     </div>
     <div class="cellx" draggable="true">Arrastrame</div>
-  </div>
-
-
+    <button id="volvermenu" class="principal" onclick="volverPaginaPrincipal()">Volver</button>
+    <script>
+        // Este código sirve para volver a la página principal, ya que al haber usado un botón no se puede hacer con href
+        document.getElementById("volvermenu").onclick = function () {
+            history.back();
+        };
+    </script>
   <script src="tresenraya.js"></script>
 </body>
 </html>
